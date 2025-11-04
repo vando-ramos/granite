@@ -1,16 +1,18 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
+  important: true,
+  content: [
+    "./app/views/**/*.html.erb",
+    "./app/helpers/**/*.rb",
+    "./app/javascript/**/*.{js,jsx,ts,tsx,vue}",
+  ],
   theme: {
     extend: {
       colors: {
         "bb-purple": "#5469D4",
         "bb-env": "#F1F5F9",
         "bb-border": "#E4E4E7",
-        "bb-gray-700": "#37415",
+        "bb-gray-700": "#374151", // corrigido (estava "#37415")
         "bb-gray-600": "#4B5563",
         "bb-red": "#F56565",
         "bb-green": "#31C48D",
@@ -22,6 +24,5 @@ module.exports = {
       },
     },
   },
-  variants: {},
   plugins: [],
 };
