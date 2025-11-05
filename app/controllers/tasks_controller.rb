@@ -7,7 +7,8 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find_by(identifier_name: params[:identifier_name])
+    task = Task.find_by!(slug: params[:slug])
+    render_json({ task: task })
   end
 
   def create
