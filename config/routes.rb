@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   constraints(lambda { |req| req.format == :json }) do
     resources :tasks, only: %i[index show create update destroy], param: :slug
     resources :users, only: %i[index create]
-    resource :session, only: :create
+    resource :session, only: %i[create destroy]
   end
 
   root "home#index"
