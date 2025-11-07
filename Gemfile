@@ -55,10 +55,15 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 
   # For code formatting and linting
+  gem "pry-byebug"
   gem "rubocop", require: false
   gem "rubocop-rails", require: false
 
-  gem "pry-byebug"
+  # Rails integration for factory_bot, a replacement for fixtures
+  gem "factory_bot_rails"
+
+  # For auto-generating demo data
+  gem "faker"
 end
 
 group :development do
